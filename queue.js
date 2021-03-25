@@ -20,8 +20,20 @@ function queue(){
     this.isEmpty = () => {
         return collection.length === 0 ? console.log("IS EMPTY"): console.log("IS NOT EMPTY")
     }
+    this.clear = () => {
+        collection = []
+    }
 }
 
 let q = new queue
 q.isEmpty()
-
+q.enqueue(100)
+q.isEmpty()
+q.print()
+q.enqueue(50)
+q.print()
+console.log(q.front())
+q.clear()
+q.print()
+q.enqueue(50)
+q.print()
